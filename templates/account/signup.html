@@ -35,7 +35,7 @@
         <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="">
       </div>
       <div class="form-group">
-        <input type="email" name="email" class="form-control" placeholder="Email" required="">
+        <input type="email" name="username" class="form-control" placeholder="Email" required="">
       </div>
       <div class="form-group">
         <input type="password" name="password1" class="form-control" placeholder="Password" required="">
@@ -44,7 +44,7 @@
         <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required="">
       </div>
       <div class="checkbox mb-3">
-        {{ form.subscription }}
+        {{ form.subscription }} I'd like to receive PlacePass news and offers
       </div>
       {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
