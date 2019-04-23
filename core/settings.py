@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
     'user',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -148,4 +149,4 @@ ACCOUNT_FORMS = {
     'signup': 'user.forms.CustomUserCreationForm',
 }
 
-LOGIN_REDIRECT_URL = '/accounts/signup/'
+LOGIN_REDIRECT_URL = '/'
