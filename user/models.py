@@ -5,3 +5,4 @@ from django.db import models
 class User(AbstractUser):
     USERNAME_FIELD = 'email'
     subscription = models.BooleanField('Подписка', default=False)
+    REQUIRED_FIELDS = []
