@@ -46,6 +46,9 @@
       <div class="checkbox mb-3">
         {{ form.subscription }}
       </div>
+      {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
       <button class="btn btn-lg btn-success btn-block text-uppercase p-4" type="submit">register</button>
     </form>
 
