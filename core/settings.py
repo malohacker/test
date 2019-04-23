@@ -148,4 +148,4 @@ ACCOUNT_FORMS = {
     'signup': 'user.forms.CustomUserCreationForm',
 }
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/accounts/signup/'
