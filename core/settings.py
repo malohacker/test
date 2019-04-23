@@ -24,7 +24,10 @@ SECRET_KEY = '&ttbri7&w$r4^*3)4-w#8&iqzb8+7ziyjhv!o9zv_&$0x&_n9+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
 SITE_ID = 1
+AUTH_USER_MODEL = 'user.User'
+
 ALLOWED_HOSTS = [u'msokolov.pythonanywhere.com']
 
 
@@ -50,6 +53,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +71,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -138,3 +142,8 @@ MEDIA_ROOT = u'/home/msokolov/auth/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = u'/home/msokolov/auth/static'
 STATIC_URL = '/static/'
+
+ACCOUNT_FORMS = {
+    'login': 'allauth.account.forms.LoginForm',
+    'signup': 'user.forms.CustomUserCreationForm',
+}
