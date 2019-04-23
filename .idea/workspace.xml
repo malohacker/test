@@ -200,21 +200,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556008039705</updated>
-      <workItem from="1556008042552" duration="4632000" />
+      <workItem from="1556008042552" duration="5052000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4632000" />
+    <option name="totallyTimeSpent" value="5052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1873" height="1053" extended-state="6" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24958949" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24958949" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3293348" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Python Console" order="4" weight="0.3293348" />
