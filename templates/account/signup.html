@@ -14,18 +14,22 @@
     <title>signin!</title>
   </head>
   <body>
+    {% if request.user.is_authenticated %}
+    <h1>{{ request.user.get_full_name }}</h1>
+      <a href="{% url 'account_logout' %}" type="button" class="btn btn-primary">Log out</a>
+    {% else %}
     <form class="form-signin" method="post" action="{% url 'account_signup' %}">{% csrf_token %}
       <h1 class="h3 mb-3 font-weight-normal text-center">SIGN UP WITH</h1>
       <div class="row social">
         <div class="col-5 text-center">
-          <a href='{% provider_login_url "facebook" process="connect" %}'>
+          <a href='{% provider_login_url "facebook" %}'>
           <img src="{% static 'img/facebook-2.svg' %}" class="img-fluid">
           <span class="text-uppercase">facebook</span>
           </a>
         </div>
         <div class="col-2 text-center">/</div>
         <div class="col-5 text-center">
-          <a href='{% provider_login_url "google" process="connect" %}'>
+          <a href='{% provider_login_url "google" %}'>
           <img src="{% static 'img/new-google-favicon-512.png' %}" class="img-fluid">
           <span class="text-uppercase">google</span>
           </a>
@@ -55,6 +59,7 @@
       {% endif %}
       <button class="btn btn-lg btn-success btn-block text-uppercase p-4" type="submit">register</button>
     </form>
+    {% endif %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

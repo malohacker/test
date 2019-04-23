@@ -147,3 +147,5 @@ ACCOUNT_FORMS = {
     'login': 'allauth.account.forms.LoginForm',
     'signup': 'user.forms.CustomUserCreationForm',
 }
+
+LOGIN_REDIRECT_URL = '/'
