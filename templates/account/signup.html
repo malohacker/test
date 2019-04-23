@@ -14,7 +14,7 @@
     <title>signin!</title>
   </head>
   <body>
-    <form class="form-signin">{% csrf_token %}
+    <form class="form-signin" method="post" action="{% url 'account_signup' %}">{% csrf_token %}
       <h1 class="h3 mb-3 font-weight-normal text-center">SIGN UP WITH</h1>
       <div class="row social">
         <div class="col-5 text-center">
