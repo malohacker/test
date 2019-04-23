@@ -1,4 +1,4 @@
-{% load static %}
+{% load static socialaccount %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,13 +18,17 @@
       <h1 class="h3 mb-3 font-weight-normal text-center">SIGN UP WITH</h1>
       <div class="row social">
         <div class="col-5 text-center">
+          <a href='{% provider_login_url "facebook" process="connect" %}'>
           <img src="{% static 'img/facebook-2.svg' %}" class="img-fluid">
           <span class="text-uppercase">facebook</span>
+          </a>
         </div>
         <div class="col-2 text-center">/</div>
         <div class="col-5 text-center">
+          <a href='{% provider_login_url "google" process="connect" %}'>
           <img src="{% static 'img/new-google-favicon-512.png' %}" class="img-fluid">
           <span class="text-uppercase">google</span>
+          </a>
         </div>
       </div>
       <div class="text-divider"><span>or</span></div>
