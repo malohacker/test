@@ -37,28 +37,37 @@
       </div>
       <div class="text-divider"><span>or</span></div>
       <div class="form-group">
-        <input type="text" name="first_name" class="form-control" placeholder="First Name" required="">
+        <input type="text" name="first_name" class="form-control" placeholder="&#xf2bd; First Name" required="">
       </div>
       <div class="form-group">
-        <input type="text" name="last_name" class="form-control" placeholder="Last Name" required="">
+        <input type="text" name="last_name" class="form-control" placeholder="&#xf2bd; Last Name" required="">
       </div>
       <div class="form-group">
-        <input type="email" name="username" class="form-control" placeholder="Email" required="">
+        <input type="email" name="username" class="form-control" placeholder="&#xf0e0; Email" required="">
       </div>
       <div class="form-group">
-        <input type="password" name="password1" class="form-control" placeholder="Password" required="">
+        <input type="password" name="password1" class="form-control" placeholder="&#xf023; Password" required="">
       </div>
       <div class="form-group">
-        <input type="password" name="password2" class="form-control" placeholder="Confirm Password" required="">
+        <input type="password" name="password2" class="form-control" placeholder="&#xf023; Confirm Password" required="">
       </div>
       <div class="checkbox mb-3">
         {{ form.subscription }} I'd like to receive PlacePass news and offers
       </div>
+      <p class="text-muted">
+        By signin up, I agree to the PlacePass <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+      </p>
       {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
       {% endif %}
       <button class="btn btn-lg btn-success btn-block text-uppercase p-4" type="submit">register</button>
     </form>
+    <div class="row d-flex justify-content-between">
+      <div class="col">Already have an account?</div>
+      <div class="col">
+        <a type="button" class="btn btn-outline-info text-uppercase" href="{% url 'account_login' %}">log in</a>
+      </div>
+    </div>
     {% endif %}
 
     <!-- Optional JavaScript -->
@@ -72,5 +81,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/7c8a6a4713.js"></script>
   </body>
 </html>
